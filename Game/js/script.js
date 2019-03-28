@@ -13,13 +13,27 @@ var weightTwo = document.getElementById('weight-two');
 
 // Free fall speed
 var g = 9.8;
+// Weights
+var m1;
+var m2;
 
+// Lengths
+var l1;
+var l2;
+
+// Loads
+var F1;
+var F2;
+
+// Moments of force
+var M1;
+var M2;
+var M0;
 
 
 
 function  Rotation(elem){
   var elem = elem;
-  
 
   lengthOne.oninput = function(){
     l1 = this.value;
