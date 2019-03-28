@@ -1,4 +1,6 @@
 // Drag'n'Drop part
+var randomWeight = document.getElementById('random-weight'),
+    randomLength = document.getElementById('random-length');
 
 function getCoords(elem){
   var box = elem.getBoundingClientRect();
@@ -24,12 +26,12 @@ var firstLeft     = document.querySelector('.line-ten'),
     seventhLeft   = document.querySelector('.line-seventy');
     // Right side
 var firstRight    = document.querySelector('.right-line-ten'),
-    secondRight   = document.querySelector('.right-line-ten'),
-    thirdRight    = document.querySelector('.right-line-ten'),
-    fourthRight   = document.querySelector('.right-line-ten'),
-    fifthRight    = document.querySelector('.right-line-ten'),
-    sixthRight    = document.querySelector('.right-line-ten'),
-    seventhRight  = document.querySelector('.right-line-ten');
+    secondRight   = document.querySelector('.right-line-twenty'),
+    thirdRight    = document.querySelector('.right-line-thirty'),
+    fourthRight   = document.querySelector('.right-line-fourty'),
+    fifthRight    = document.querySelector('.right-line-fifty'),
+    sixthRight    = document.querySelector('.right-line-sixty'),
+    seventhRight  = document.querySelector('.right-line-seventy');
 
 block.onmousedown = function(e){
   var event = e || event;
@@ -81,6 +83,9 @@ block.onmousedown = function(e){
       l1 = firstLeft.getAttribute('data-length');
       m2 = Math.floor(1 + Math.random() * (50 + 1 - 1));
       l2 = Math.floor(10 + Math.random() * (70 + 1 - 10));
+
+      randomWeight.value = 'm2 : ' + m2;
+      randomLenght.value = 'l2 : ' + l2;
       leverArm.rotate();
     }
 
@@ -94,6 +99,8 @@ block.onmousedown = function(e){
       l1 = secondLeft.getAttribute('data-length');
       m2 = Math.floor(1 + Math.random() * (50 + 1 - 1));
       l2 = Math.floor(10 + Math.random() * (70 + 1 - 10));
+      randomWeight.value = 'm2 : ' + m2;
+      randomLenght.value = 'l2 : ' + l2;
       leverArm.rotate();
     }
 
@@ -107,6 +114,8 @@ block.onmousedown = function(e){
       l1 = thirdLeft.getAttribute('data-length');
       m2 = Math.floor(1 + Math.random() * (50 + 1 - 1));
       l2 = Math.floor(10 + Math.random() * (70 + 1 - 10));
+      randomWeight.value = 'm2 : ' + m2;
+      randomLenght.value = 'l2 : ' + l2;
       leverArm.rotate();
     }
 
@@ -120,6 +129,8 @@ block.onmousedown = function(e){
       l1 = fourthLeft.getAttribute('data-length');
       m2 = Math.floor(1 + Math.random() * (50 + 1 - 1));
       l2 = Math.floor(10 + Math.random() * (70 + 1 - 10));
+      randomWeight.value = 'm2 : ' + m2;
+      randomLenght.value = 'l2 : ' + l2;
       leverArm.rotate();
     }
 
@@ -133,6 +144,8 @@ block.onmousedown = function(e){
       l1 = fifthLeft.getAttribute('data-length');
       m2 = Math.floor(1 + Math.random() * (50 + 1 - 1));
       l2 = Math.floor(10 + Math.random() * (70 + 1 - 10));
+      randomWeight.value = 'm2 : ' + m2;
+      randomLenght.value = 'l2 : ' + l2;
       leverArm.rotate();
     }
 
@@ -146,6 +159,8 @@ block.onmousedown = function(e){
       l1 = sixthLeft.getAttribute('data-length');
       m2 = Math.floor(1 + Math.random() * (50 + 1 - 1));
       l2 = Math.floor(10 + Math.random() * (70 + 1 - 10));
+      randomWeight.value = 'm2 : ' + m2;
+      randomLength.value = 'l2 : ' + l2;
       leverArm.rotate();
     }
 
@@ -159,6 +174,8 @@ block.onmousedown = function(e){
       l1 = seventhLeft.getAttribute('data-length');
       m2 = Math.floor(1 + Math.random() * (50 + 1 - 1));
       l2 = Math.floor(10 + Math.random() * (70 + 1 - 10));
+      randomWeight.value = 'm2 : ' + m2;
+      randomLength.value = 'l2 : ' + l2;
       leverArm.rotate();
     }
 
@@ -172,6 +189,8 @@ block.onmousedown = function(e){
       l1 = Math.floor(10 + Math.random() * (70 + 1 - 10));
       m2 = block.getAttribute('data-weight');
       l2 = firstRight.getAttribute('data-length');
+      randomWeight.value = 'm1 : ' + m1;
+      randomLength.value = 'l1 : ' + l1;
       leverArm.rotate();
     }
 
@@ -185,6 +204,8 @@ block.onmousedown = function(e){
       l1 = Math.floor(10 + Math.random() * (70 + 1 - 10));
       m2 = block.getAttribute('data-weight');
       l2 = secondRight.getAttribute('data-length');
+      randomWeight.value = 'm1 : ' + m1;
+      randomLength.value = 'l1 : ' + l1;
       leverArm.rotate();
     }
 
@@ -198,6 +219,8 @@ block.onmousedown = function(e){
       l1 = Math.floor(10 + Math.random() * (70 + 1 - 10));
       m2 = block.getAttribute('data-weight');
       l2 = thirdRight.getAttribute('data-length');
+      randomWeight.value = 'm1 : ' + m1;
+      randomLength.value = 'l1 : ' + l1;
       leverArm.rotate();
     }
 
@@ -211,6 +234,8 @@ block.onmousedown = function(e){
       l1 = Math.floor(10 + Math.random() * (70 + 1 - 10));
       m2 = block.getAttribute('data-weight');
       l2 = fourthRight.getAttribute('data-length');
+      randomWeight.value = 'm1 : ' + m1;
+      randomLength.value = 'l1 : ' + l1;
       leverArm.rotate();
     }
 
@@ -224,6 +249,8 @@ block.onmousedown = function(e){
       l1 = Math.floor(10 + Math.random() * (70 + 1 - 10));
       m2 = block.getAttribute('data-weight');
       l2 = fifthRight.getAttribute('data-length');
+      randomWeight.value = 'm1 : ' + m1;
+      randomLength.value = 'l1 : ' + l1;
       leverArm.rotate();
     }
 
@@ -237,6 +264,8 @@ block.onmousedown = function(e){
       l1 = Math.floor(10 + Math.random() * (70 + 1 - 10));
       m2 = block.getAttribute('data-weight');
       l2 = sixthRight.getAttribute('data-length');
+      randomWeight.value = 'm1 : ' + m1;
+      randomLength.value = 'l1 : ' + l1;
       leverArm.rotate();
     }
 
@@ -251,6 +280,8 @@ block.onmousedown = function(e){
       l1 = Math.floor(10 + Math.random() * (70 + 1 - 10));
       m2 = block.getAttribute('data-weight');
       l2 = seventhRight.getAttribute('data-length');
+      randomWeight.value = 'm1 : ' + m1;
+      randomLength.value = 'l1 : ' + l1;
       leverArm.rotate();
     }
   }

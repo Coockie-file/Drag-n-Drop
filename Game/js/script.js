@@ -1,4 +1,5 @@
 var line = document.querySelector('.container-line');
+var restart = document.getElementById('restart');
 
 var lineCenter = document.querySelector('.container-line__center');
 function center(){
@@ -49,18 +50,25 @@ function  Rotation(elem){
     elem.style = 'transform: rotate('+ M0 +'deg);transition: all 2s;';
   }
 
-  function cancel(){
+  function restart(){
     elem.style = 'transform: rotate(0deg);transition: all 2s';
-    startBtn.removeEventListener('click',rotate);
+    block.closest('.line').removeChild(block);
+    document.body.appendChild(block);
+    block.style.top = '100px';
+    block.style.left = '50px';
+    randomWeight.value = '';
+    randomLength.value = '';
   }
 
   this.rotate = rotate;
-  this.cancel = cancel;
+  this.restart = restart;
 
 }
 
 var leverArm = new Rotation(line);
-
+restart.addEventListener('click',function(){
+  leverArm.restart();
+})
 
 
 
