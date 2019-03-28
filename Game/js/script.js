@@ -10,6 +10,7 @@ var lengthTwo = document.getElementById('length-two');
 var weightOne = document.getElementById('weight-one');
 var weightTwo = document.getElementById('weight-two');
 
+
 var lineCenter = document.querySelector('.container-line__center');
 function center(){
   var lineWidth = line.offsetWidth;
@@ -94,66 +95,6 @@ cancelBtn.addEventListener('click', function(){
 })
 
 var leverArm = new Rotation(line);
-
-// Drag'n'Drop part
-
-function getCoords(elem){
-  var box = elem.getBoundingClientRect();
-  return {
-    top: box.top + pageYOffset,
-    left: box.left + pageXOffset,
-  }
-};
-
-var block = document.querySelector('.block');
-
-// Getting all ruler points
-
-var firstLeftCoords   = getCoords(document.querySelector('.line-ten')),
-    secondLeftCoords   = getCoords(document.querySelector('.line-twenty')),
-    thirdLeftCoords   = getCoords(document.querySelector('.line-thirty')),
-    fourthLeftCoords  = getCoords(document.querySelector('.line-fourty')),
-    fifthLeftCoords    = getCoords(document.querySelector('.line-fifty')),
-    sixthLeftCoords    = getCoords(document.querySelector('.line-sixty')),
-    seventhLeftCoords  = getCoords(document.querySelector('.line-seventy'));
-
-
-var firstLeft   = document.elementFromPoint(firstLeftCoords.top, firstLeftCoords.left),
-    secondLeft  = document.elementFromPoint(secondLeftCoords.top, secondLeftCoords.left),
-    thirdLeft   = document.elementFromPoint(thirdLeftCoords.top, thirdLeftCoords.left),
-    fourthLeft  = document.elementFromPoint(fourthLeftCoords.top, fourthLeftCoords.left),
-    fifthLeft   = document.elementFromPoint(fifthLeftCoords.top, fifthLeftCoords.left),
-    sixthLeft   = document.elementFromPoint(sixthLeftCoords.top, sixthLeftCoords.left),
-    seventhLeft = document.elementFromPoint(seventhLeftCoords.top, seventhLeftCoords.left);
-
-block.onmousedown = function(e){
-  var event = e || event;
-  var coords = getCoords(block);
-  document.body.appendChild(block);
-  var shiftX = event.pageX - coords.left,
-      shiftY = event.pageY - coords.top;
-
-  var moveY , moveX;
-  function move(event){
-    moveX = event.pageX - shiftX;
-    moveY = event.pageY - shiftY
-    block.style.left = moveX + 'px';
-    block.style.top  = moveY + 'px';
-
-  }
-  block.onmousemove = function(event){
-    move(event);
-  }
-
-  block.onmouseup = function(){
-    block.onmousemove = null;
-    block.onmouseup = null;
-  }
-
-  block.ondragstart = function(){
-    return false;
-  }
-}
 
 
 
