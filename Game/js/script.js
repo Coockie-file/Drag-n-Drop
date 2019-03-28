@@ -107,16 +107,40 @@ function getCoords(elem){
 
 var block = document.querySelector('.block');
 
+// Getting all ruler points
+
+var firstLeft   = document.querySelector('.line-ten'),
+    secondLeft  = document.querySelector('.line-twenty'),
+    thirdLeft   = document.querySelector('.line-thirty'),
+    fourthLeft  = document.querySelector('.line-fourty'),
+    fifthLeft   = document.querySelector('.line-fifty'),
+    sixthLeft   = document.querySelector('.line-sixty'),
+    seventhLeft = document.querySelector('.line-seventy');
+
+// Getting all ruler points's coords
+
+var firstLeftCoords   = getCoords(firstLeft),
+    secondLetCoords   = getCoords(secondLeft),
+    thirdLeftCoords   = getCoords(thirdLeft),
+    fourthLeftCoords  = getCoords(fourthLeft),
+    fifthLetCoords    = getCoords(fifthLeft),
+    sixthLetCoords    = getCoords(sixthLeft),
+    seventhLetCoords  = getCoords(seventhLeft);
+
 block.onmousedown = function(e){
   var event = e || event;
   var coords = getCoords(block);
   document.body.appendChild(block);
-  var shiftX = event.pageX - coords.left;
-  var shiftY = event.pageY - coords.top;
+  var shiftX = event.pageX - coords.left,
+      shiftY = event.pageY - coords.top;
 
+  var moveY , moveX;
   function move(event){
-    block.style.left = event.pageX - shiftX + 'px';
-    block.style.top  = event.pageY - shiftY + 'px';
+    moveX = event.pageX - shiftX;
+    moveY = event.pageY - shiftY
+    block.style.left = moveX + 'px';
+    block.style.top  = moveY + 'px';
+    
   }
   block.onmousemove = function(event){
     move(event);
@@ -131,6 +155,7 @@ block.onmousedown = function(e){
     return false;
   }
 }
+
 
 
 
