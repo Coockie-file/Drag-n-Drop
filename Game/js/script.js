@@ -1,15 +1,4 @@
 var line = document.querySelector('.container-line');
-var timer = document.getElementById('input');
-
-var startBtn = document.getElementById('start-button');
-var cancelBtn = document.getElementById('cancel-button');
-
-var lengthOne = document.getElementById('length-one');
-var lengthTwo = document.getElementById('length-two');
-
-var weightOne = document.getElementById('weight-one');
-var weightTwo = document.getElementById('weight-two');
-
 
 var lineCenter = document.querySelector('.container-line__center');
 function center(){
@@ -43,22 +32,6 @@ var M0;
 
 function  Rotation(elem){
   var elem = elem;
-
-  lengthOne.oninput = function(){
-    l1 = this.value;
-  }
-  
-  lengthTwo.oninput = function(){
-    l2 = this.value;
-  }
-  
-  weightOne.oninput = function(){
-    m1 = this.value;
-  }
-  
-  weightTwo.oninput = function(){
-    m2 = this.value;
-  }
 
   function rotate(){
 
