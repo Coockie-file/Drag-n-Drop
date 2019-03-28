@@ -42,8 +42,8 @@ function  Rotation(elem){
     l2 = l2/100;
 
     // Counting moments of force
-    M1 = -(F1 * l1); // negative rotation
-    M2 =   F2 * l2;  // positive rotation
+    M1 =   F1 * l1; // negative rotation
+    M2 =   -(F2 * l2);  // positive rotation
 
     M0 = M1 + M2; // rotation angle
     elem.style = 'transform: rotate('+ M0 +'deg);transition: all 2s;';
@@ -58,14 +58,6 @@ function  Rotation(elem){
   this.cancel = cancel;
 
 }
-
-startBtn.addEventListener('click', function(){
-  leverArm.rotate();
-})
-
-cancelBtn.addEventListener('click', function(){
-  leverArm.cancel();
-})
 
 var leverArm = new Rotation(line);
 

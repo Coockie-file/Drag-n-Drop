@@ -9,7 +9,8 @@ function getCoords(elem){
 };
 
 var block = document.querySelector('.block');
-
+var index;
+var start = false;
 
 
 // Getting all ruler points
@@ -76,6 +77,11 @@ block.onmousedown = function(e){
       block.style.top  = '-30px';
       firstLeft.appendChild(block);
       block.onmousemove = null;
+      m1 = block.getAttribute('data-weight');
+      l1 = firstLeft.getAttribute('data-length');
+      m2 = Math.floor(1 + Math.random() * (50 + 1 - 1));
+      l2 = Math.floor(10 + Math.random() * (70 + 1 - 10));
+      leverArm.rotate();
     }
 
     // Второе левое деление
@@ -84,6 +90,11 @@ block.onmousedown = function(e){
       block.style.top  = '-30px';
       secondLeft.appendChild(block);
       block.onmousemove = null;
+      m1 = block.getAttribute('data-weight');
+      l1 = secondLeft.getAttribute('data-length');
+      m2 = Math.floor(1 + Math.random() * (50 + 1 - 1));
+      l2 = Math.floor(10 + Math.random() * (70 + 1 - 10));
+      leverArm.rotate();
     }
 
     // Третье левое деление
@@ -92,6 +103,11 @@ block.onmousedown = function(e){
       block.style.top  = '-30px';
       thirdLeft.appendChild(block);
       block.onmousemove = null;
+      m1 = block.getAttribute('data-weight');
+      l1 = thirdLeft.getAttribute('data-length');
+      m2 = Math.floor(1 + Math.random() * (50 + 1 - 1));
+      l2 = Math.floor(10 + Math.random() * (70 + 1 - 10));
+      leverArm.rotate();
     }
 
     // Четвертое левое деление
@@ -100,6 +116,11 @@ block.onmousedown = function(e){
       block.style.top  = '-30px';
       fourthLeft.appendChild(block);
       block.onmousemove = null;
+      m1 = block.getAttribute('data-weight');
+      l1 = fourthLeft.getAttribute('data-length');
+      m2 = Math.floor(1 + Math.random() * (50 + 1 - 1));
+      l2 = Math.floor(10 + Math.random() * (70 + 1 - 10));
+      leverArm.rotate();
     }
 
     // Пятое левое деление
@@ -108,6 +129,11 @@ block.onmousedown = function(e){
       block.style.top  = '-30px';
       fifthLeft.appendChild(block);
       block.onmousemove = null;
+      m1 = block.getAttribute('data-weight');
+      l1 = fifthLeft.getAttribute('data-length');
+      m2 = Math.floor(1 + Math.random() * (50 + 1 - 1));
+      l2 = Math.floor(10 + Math.random() * (70 + 1 - 10));
+      leverArm.rotate();
     }
 
     // Шестое левое деление
@@ -116,6 +142,11 @@ block.onmousedown = function(e){
       block.style.top  = '-30px';
       sixthLeft.appendChild(block);
       block.onmousemove = null;
+      m1 = block.getAttribute('data-weight');
+      l1 = sixthLeft.getAttribute('data-length');
+      m2 = Math.floor(1 + Math.random() * (50 + 1 - 1));
+      l2 = Math.floor(10 + Math.random() * (70 + 1 - 10));
+      leverArm.rotate();
     }
 
     // Седьмое левое деление
@@ -124,6 +155,11 @@ block.onmousedown = function(e){
       block.style.top  = '-30px';
       seventhLeft.appendChild(block);
       block.onmousemove = null;
+      m1 = block.getAttribute('data-weight');
+      l1 = seventhLeft.getAttribute('data-length');
+      m2 = Math.floor(1 + Math.random() * (50 + 1 - 1));
+      l2 = Math.floor(10 + Math.random() * (70 + 1 - 10));
+      leverArm.rotate();
     }
 
     // Первое правое деление
@@ -132,6 +168,11 @@ block.onmousedown = function(e){
       block.style.top  = '-30px';
       firstRight.appendChild(block);
       block.onmousemove = null;
+      m1 = Math.floor(1 + Math.random() * (50 + 1 - 1));
+      l1 = Math.floor(10 + Math.random() * (70 + 1 - 10));
+      m2 = block.getAttribute('data-weight');
+      l2 = firstRight.getAttribute('data-length');
+      leverArm.rotate();
     }
 
     // Второе правое деление
@@ -140,6 +181,11 @@ block.onmousedown = function(e){
       block.style.top  = '-30px';
       secondRight.appendChild(block);
       block.onmousemove = null;
+      m1 = Math.floor(1 + Math.random() * (50 + 1 - 1));
+      l1 = Math.floor(10 + Math.random() * (70 + 1 - 10));
+      m2 = block.getAttribute('data-weight');
+      l2 = secondRight.getAttribute('data-length');
+      leverArm.rotate();
     }
 
     // Третье правое деление
@@ -148,6 +194,11 @@ block.onmousedown = function(e){
       block.style.top  = '-30px';
       thirdRight.appendChild(block);
       block.onmousemove = null;
+      m1 = Math.floor(1 + Math.random() * (50 + 1 - 1));
+      l1 = Math.floor(10 + Math.random() * (70 + 1 - 10));
+      m2 = block.getAttribute('data-weight');
+      l2 = thirdRight.getAttribute('data-length');
+      leverArm.rotate();
     }
 
     // Четвертое правое деление
@@ -156,6 +207,11 @@ block.onmousedown = function(e){
       block.style.top  = '-30px';
       fourthRight.appendChild(block);
       block.onmousemove = null;
+      m1 = Math.floor(1 + Math.random() * (50 + 1 - 1));
+      l1 = Math.floor(10 + Math.random() * (70 + 1 - 10));
+      m2 = block.getAttribute('data-weight');
+      l2 = fourthRight.getAttribute('data-length');
+      leverArm.rotate();
     }
 
     // Пятое правое деление
@@ -164,23 +220,38 @@ block.onmousedown = function(e){
       block.style.top  = '-30px';
       fifthRight.appendChild(block);
       block.onmousemove = null;
+      m1 = Math.floor(1 + Math.random() * (50 + 1 - 1));
+      l1 = Math.floor(10 + Math.random() * (70 + 1 - 10));
+      m2 = block.getAttribute('data-weight');
+      l2 = fifthRight.getAttribute('data-length');
+      leverArm.rotate();
     }
 
     // Шестое правое деление
-    if(inRange(fourthLeft)){
+    if(inRange(sixthRight)){
       block.style.left = '0px';
       block.style.top  = '-30px';
-      fourthLeft.appendChild(block);
+      sixthRight.appendChild(block);
       block.onmousemove = null;
+      m1 = Math.floor(1 + Math.random() * (50 + 1 - 1));
+      l1 = Math.floor(10 + Math.random() * (70 + 1 - 10));
+      m2 = block.getAttribute('data-weight');
+      l2 = sixthRight.getAttribute('data-length');
+      leverArm.rotate();
     }
 
     // Седьмое правое деление
-    if(inRange(fourthLeft)){
+    if(inRange(seventhRight)){
       block.style.left = '0px';
       block.style.top  = '-30px';
-      fourthLeft.appendChild(block);
+      seventhRight.appendChild(block);
       block.onmousemove = null;
       block.onmouseup   = null;
+      m1 = Math.floor(1 + Math.random() * (50 + 1 - 1));
+      l1 = Math.floor(10 + Math.random() * (70 + 1 - 10));
+      m2 = block.getAttribute('data-weight');
+      l2 = seventhRight.getAttribute('data-length');
+      leverArm.rotate();
     }
   }
   block.onmousemove = function(event){
@@ -197,12 +268,3 @@ block.onmousedown = function(e){
   }
 }
 
-function isOnLine(block){
-  var lines = document.querySelectorAll('.line');
-  for(var i = 0; i < lines.length; i++){
-    if(block.closest('.line')){
-      return i;
-    }
-  }
-  return false;
-}
