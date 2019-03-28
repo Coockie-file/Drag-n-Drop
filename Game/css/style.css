@@ -1,3 +1,8 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .container {
   width: 100%;
   height: 100%;
@@ -20,10 +25,65 @@
 .container-line {
   position: relative;
   display: block;
-  width: 600px;
+  width: 800px;
   height: 20px;
-  background-color: black;
+  border: 1px solid black;
   -webkit-transform-origin: center;
           transform-origin: center;
+}
+
+.container-line__center {
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: blue;
+  top: 5px;
+}
+
+.line {
+  position: absolute;
+  display: block;
+  height: 30px;
+  width: 2px;
+  background-color: black;
+  bottom: -1px;
+}
+
+.line-ten {
+  left: 248px;
+}
+
+.line-twenty {
+  left: 208px;
+}
+
+.line-thirty {
+  left: 168px;
+}
+
+.line-fourty {
+  left: 128px;
+}
+
+.line-fifty {
+  left: 88px;
+}
+
+.line-sixty {
+  left: 48px;
+}
+
+.line-seventy {
+  left: 8px;
+}
+
+.block {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: #009900;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

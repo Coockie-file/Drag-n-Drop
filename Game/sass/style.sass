@@ -1,3 +1,5 @@
+*
+  box-sizing: border-box
 .container
   width: 100%
   height: 100%
@@ -9,7 +11,42 @@
   &-line
     position: relative
     display: block
-    width: 600px
+    width: 800px
     height: 20px
-    background-color: black
+    border: 1px solid black
     transform-origin: center
+    &__center
+      position: absolute
+      display: block
+      width: 10px
+      height: 10px
+      border-radius: 50%
+      background-color: blue
+      top: 5px
+.line
+  position: absolute
+  display: block
+  height: 30px
+  width: 2px
+  background-color: black
+  bottom: -1px
+  &-ten
+    left: 248px
+  &-twenty
+    left: 208px 
+  &-thirty
+    left: 168px
+  &-fourty
+    left: 128px
+  &-fifty
+    left: 88px 
+  &-sixty
+    left: 48px
+  &-seventy
+    left: 8px
+.block
+  display: block
+  width: 40px
+  height: 40px
+  background-color: darken(#00ff00, 20%)
+  cursor: pointer
