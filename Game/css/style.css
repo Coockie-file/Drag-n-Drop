@@ -52,37 +52,68 @@
 }
 
 .line-ten {
-  left: 248px;
+  left: 344px;
 }
 
 .line-twenty {
-  left: 208px;
+  left: 294px;
 }
 
 .line-thirty {
-  left: 168px;
+  left: 244px;
 }
 
 .line-fourty {
-  left: 128px;
+  left: 194px;
 }
 
 .line-fifty {
-  left: 88px;
+  left: 144px;
 }
 
 .line-sixty {
-  left: 48px;
+  left: 94px;
 }
 
 .line-seventy {
-  left: 8px;
+  left: 44px;
+}
+
+.right-line-ten {
+  right: 344px;
+}
+
+.right-line-twenty {
+  right: 294px;
+}
+
+.right-line-thirty {
+  right: 244px;
+}
+
+.right-line-fourty {
+  right: 194px;
+}
+
+.right-line-fifty {
+  right: 144px;
+}
+
+.right-line-sixty {
+  right: 94px;
+}
+
+.right-line-seventy {
+  right: 44px;
 }
 
 .block {
   display: block;
+  position: absolute;
   width: 40px;
   height: 40px;
+  top: 200px;
+  left: 50px;
   background-color: #009900;
   cursor: pointer;
 }

@@ -115,7 +115,6 @@ block.onmousedown = function(e){
   var shiftY = event.pageY - coords.top;
 
   function move(event){
-    block.style.position = 'absolute';
     block.style.left = event.pageX - shiftX + 'px';
     block.style.top  = event.pageY - shiftY + 'px';
   }
@@ -132,6 +131,8 @@ block.onmousedown = function(e){
     return false;
   }
 }
+
+
 
 
 
