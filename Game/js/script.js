@@ -109,23 +109,22 @@ var block = document.querySelector('.block');
 
 // Getting all ruler points
 
-var firstLeft   = document.querySelector('.line-ten'),
-    secondLeft  = document.querySelector('.line-twenty'),
-    thirdLeft   = document.querySelector('.line-thirty'),
-    fourthLeft  = document.querySelector('.line-fourty'),
-    fifthLeft   = document.querySelector('.line-fifty'),
-    sixthLeft   = document.querySelector('.line-sixty'),
-    seventhLeft = document.querySelector('.line-seventy');
+var firstLeftCoords   = getCoords(document.querySelector('.line-ten')),
+    secondLeftCoords   = getCoords(document.querySelector('.line-twenty')),
+    thirdLeftCoords   = getCoords(document.querySelector('.line-thirty')),
+    fourthLeftCoords  = getCoords(document.querySelector('.line-fourty')),
+    fifthLeftCoords    = getCoords(document.querySelector('.line-fifty')),
+    sixthLeftCoords    = getCoords(document.querySelector('.line-sixty')),
+    seventhLeftCoords  = getCoords(document.querySelector('.line-seventy'));
 
-// Getting all ruler points's coords
 
-var firstLeftCoords   = getCoords(firstLeft),
-    secondLetCoords   = getCoords(secondLeft),
-    thirdLeftCoords   = getCoords(thirdLeft),
-    fourthLeftCoords  = getCoords(fourthLeft),
-    fifthLetCoords    = getCoords(fifthLeft),
-    sixthLetCoords    = getCoords(sixthLeft),
-    seventhLetCoords  = getCoords(seventhLeft);
+var firstLeft   = document.elementFromPoint(firstLeftCoords.top, firstLeftCoords.left),
+    secondLeft  = document.elementFromPoint(secondLeftCoords.top, secondLeftCoords.left),
+    thirdLeft   = document.elementFromPoint(thirdLeftCoords.top, thirdLeftCoords.left),
+    fourthLeft  = document.elementFromPoint(fourthLeftCoords.top, fourthLeftCoords.left),
+    fifthLeft   = document.elementFromPoint(fifthLeftCoords.top, fifthLeftCoords.left),
+    sixthLeft   = document.elementFromPoint(sixthLeftCoords.top, sixthLeftCoords.left),
+    seventhLeft = document.elementFromPoint(seventhLeftCoords.top, seventhLeftCoords.left);
 
 block.onmousedown = function(e){
   var event = e || event;
@@ -140,7 +139,7 @@ block.onmousedown = function(e){
     moveY = event.pageY - shiftY
     block.style.left = moveX + 'px';
     block.style.top  = moveY + 'px';
-    
+
   }
   block.onmousemove = function(event){
     move(event);
