@@ -141,6 +141,8 @@ function inRange(point){
   }
 }
   function move(event){
+    line.style = 'transform: rotate(0deg);transition: all 2s';
+    document.body.appendChild(block);
     moveX = event.pageX - shiftX;
     moveY = event.pageY - shiftY;
     block.style.left = moveX + 'px';
@@ -249,7 +251,8 @@ function inRange(point){
   }
 
   document.onmousemove = function(event){
-    
+    line.style
+    document.body.removeChild(block);
     move(event);
   }
 
