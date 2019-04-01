@@ -244,7 +244,7 @@ function inRange(point){
     if(inRange(seventhRight)){
       seventhRight.style.backgroundColor = 'red';
     } else {
-      firstLeft.style.backgroundColor = '#000';
+      seventhRight.style.backgroundColor = '#000';
     }
 
 
