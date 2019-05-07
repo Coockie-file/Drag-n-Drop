@@ -46,7 +46,7 @@
   position: absolute;
   display: block;
   height: 30px;
-  width: 5px;
+  width: 3px;
   background-color: black;
   bottom: -1px;
 }
@@ -115,6 +115,16 @@
   top: 200px;
   left: 50px;
   background-color: #009900;
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+  line-height: 35px;
   cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+  font-family: sans-serif;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=style.css.map */

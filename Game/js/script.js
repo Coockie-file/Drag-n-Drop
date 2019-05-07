@@ -66,13 +66,9 @@ function  Rotation(elem){
 }
 
 var leverArm = new Rotation(line);
-restart.addEventListener('click',function(){
-  leverArm.restart();
-})
 
 // Drag'n'Drop part
-var randomWeight = document.getElementById('random-weight'),
-    randomLength = document.getElementById('random-length');
+
 
 function getCoords(elem){
   var box = elem.getBoundingClientRect();
@@ -267,8 +263,8 @@ function inRange(point){
       m2 = 0;
       l2 = 0;
 
-      randomWeight.value = 'm2 : ' + m2;
-      randomLength.value = 'l2 : ' + l2;
+
+
       leverArm.rotate();
     }
 
@@ -281,8 +277,7 @@ function inRange(point){
       l1 = secondLeft.getAttribute('data-length');
       m2 = 0;
       l2 = 0;
-      randomWeight.value = 'm2 : ' + m2;
-      randomLength.value = 'l2 : ' + l2;
+
       leverArm.rotate();
     }
 
@@ -295,8 +290,7 @@ function inRange(point){
       l1 = thirdLeft.getAttribute('data-length');
       m2 = 0;
       l2 = 0;
-      randomWeight.value = 'm2 : ' + m2;
-      randomLength.value = 'l2 : ' + l2;
+
       leverArm.rotate();
     }
 
@@ -309,8 +303,7 @@ function inRange(point){
       l1 = fourthLeft.getAttribute('data-length');
       m2 = 0;
       l2 = 0;
-      randomWeight.value = 'm2 : ' + m2;
-      randomLength.value = 'l2 : ' + l2;
+
       leverArm.rotate();
     }
 
@@ -323,8 +316,7 @@ function inRange(point){
       l1 = fifthLeft.getAttribute('data-length');
       m2 = 0;
       l2 = 0;
-      randomWeight.value = 'm2 : ' + m2;
-      randomLength.value = 'l2 : ' + l2;
+
       leverArm.rotate();
     }
 
@@ -337,8 +329,7 @@ function inRange(point){
       l1 = sixthLeft.getAttribute('data-length');
       m2 = 0;
       l2 = 0;
-      randomWeight.value = 'm2 : ' + m2;
-      randomLength.value = 'l2 : ' + l2;
+
       leverArm.rotate();
     }
 
@@ -351,8 +342,7 @@ function inRange(point){
       l1 = seventhLeft.getAttribute('data-length');
       m2 = 0;
       l2 =  0;
-      randomWeight.value = 'm2 : ' + m2;
-      randomLength.value = 'l2 : ' + l2;
+
       leverArm.rotate();
     }
 
@@ -365,8 +355,7 @@ function inRange(point){
       l1 = 0;
       m2 = block.getAttribute('data-weight');
       l2 = firstRight.getAttribute('data-length');
-      randomWeight.value = 'm1 : ' + m1;
-      randomLength.value = 'l1 : ' + l1;
+
       leverArm.rotate();
     }
 
@@ -379,8 +368,7 @@ function inRange(point){
       l1 = 0;
       m2 = block.getAttribute('data-weight');
       l2 = secondRight.getAttribute('data-length');
-      randomWeight.value = 'm1 : ' + m1;
-      randomLength.value = 'l1 : ' + l1;
+
       leverArm.rotate();
     }
 
@@ -393,8 +381,7 @@ function inRange(point){
       l1 = 0;
       m2 = block.getAttribute('data-weight');
       l2 = thirdRight.getAttribute('data-length');
-      randomWeight.value = 'm1 : ' + m1;
-      randomLength.value = 'l1 : ' + l1;
+
       leverArm.rotate();
     }
 
@@ -407,8 +394,7 @@ function inRange(point){
       l1 = 0;
       m2 = block.getAttribute('data-weight');
       l2 = fourthRight.getAttribute('data-length');
-      randomWeight.value = 'm1 : ' + m1;
-      randomLength.value = 'l1 : ' + l1;
+
       leverArm.rotate();
     }
 
@@ -421,8 +407,7 @@ function inRange(point){
       l1 = 0;
       m2 = block.getAttribute('data-weight');
       l2 = fifthRight.getAttribute('data-length');
-      randomWeight.value = 'm1 : ' + m1;
-      randomLength.value = 'l1 : ' + l1;
+
       leverArm.rotate();
     }
 
@@ -435,8 +420,7 @@ function inRange(point){
       l1 = 0;
       m2 = block.getAttribute('data-weight');
       l2 = sixthRight.getAttribute('data-length');
-      randomWeight.value = 'm1 : ' + m1;
-      randomLength.value = 'l1 : ' + l1;
+
       leverArm.rotate();
     }
 
@@ -449,8 +433,7 @@ function inRange(point){
       l1 = 0;
       m2 = block.getAttribute('data-weight');
       l2 = seventhRight.getAttribute('data-length');
-      randomWeight.value = 'm1 : ' + m1;
-      randomLength.value = 'l1 : ' + l1;
+
       leverArm.rotate();
     }
     document.onmousemove = null;
